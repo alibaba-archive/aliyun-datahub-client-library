@@ -75,9 +75,9 @@ public class ConsumerExample {
     public static void consumeByOffset() {
         ConsumerConfig config = new ConsumerConfig(TEST_ENDPOINT, TEST_AK, TEST_SK);
         Map<String, Offset> offsetMap = new HashMap<>();
-        offsetMap.put("0", new Offset(1, 10000));
-        offsetMap.put("1", new Offset(1, 10000));
-        offsetMap.put("2", new Offset(1, 10000));
+        offsetMap.put("0", new Offset(100, 1548573440756L));
+        offsetMap.put("1", new Offset().setSequence(1));
+        offsetMap.put("2", new Offset().setTimestamp(1548573440756L));
 
         Consumer consumer = new Consumer(TEST_PROJECT, TEST_TOPIC, TEST_SUB_ID, offsetMap, config);
 

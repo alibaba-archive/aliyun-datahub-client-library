@@ -19,7 +19,7 @@ High level api for DataHub SDK. If shard id not given, Producer will pick a shar
     <dependency>
         <groupId>com.aliyun.datahub</groupId>
         <artifactId>datahub-client-library</artifactId>
-        <version>1.0.0-public</version>
+        <version>1.0.1-public</version>
     </dependency>
     
 **1. Init Producer**
@@ -57,7 +57,7 @@ High level api for DataHub SDK. If shard id not given, Producer will pick a shar
         } catch (InvalidParameterException e) {
             // invalid param
         } catch (ResourceNotFoundException e) {
-            // project, topic or shard not found
+            // project, topic or shard not found, sometimes caused by split/merge shard
         } catch (DatahubClientException e) {
             // network or other exceptions exceeded retry limit
         }
