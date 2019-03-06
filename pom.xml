@@ -18,7 +18,7 @@
 
     <groupId>com.aliyun.datahub</groupId>
     <artifactId>datahub-client-library</artifactId>
-    <version>1.0.1-public</version>
+    <version>1.0.2-public</version>
 
     <name>datahub-client-library</name>
     <description>High level API for DataHub consuming and producing data</description>
