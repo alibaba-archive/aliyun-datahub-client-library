@@ -19,7 +19,7 @@ High level api for DataHub SDK. If shard id not given, Producer will pick a shar
     <dependency>
         <groupId>com.aliyun.datahub</groupId>
         <artifactId>datahub-client-library</artifactId>
-        <version>1.0.2-public</version>
+        <version>1.0.3-public</version>
     </dependency>
     
 **1. Init Producer**
