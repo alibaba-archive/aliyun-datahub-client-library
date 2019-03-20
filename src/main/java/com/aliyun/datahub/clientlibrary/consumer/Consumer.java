@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -95,6 +96,7 @@ public class Consumer {
             shardGroupReader = new ShardGroupReader(projectName, topicName, config);
             shardGroupReader.setSubId(subId);
             offsetCoordinator = new OffsetCoordinator(projectName, topicName, subId, config);
+            offsetCoordinator.openAndGetOffsets(new ArrayList<>(offsetMap.keySet()));
 
             shardGroupReader.createShardReader(offsetMap);
         } catch (Exception e) {
